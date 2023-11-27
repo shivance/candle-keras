@@ -1,16 +1,12 @@
 [package]
-name = "candle-keras"
+name = "candle_keras"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "candle_keras"
+crate-type = ["cdylib"]
 
 [dependencies]
-candle-core = { git = "https://github.com/huggingface/candle.git", version = "0.3.1" }
-candle-nn = { git = "https://github.com/huggingface/candle.git", version = "0.3.1" }
-
-
-[workspace]
-members = [
-    "keras"
-]
+pyo3 = "0.19.0"
